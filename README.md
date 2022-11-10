@@ -4,6 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+Before running project, you should run: 
+
+### `npm i`
+
+### `npm run postinstall`
+
 In the project directory, you can run:
 
 ### `npm start`
