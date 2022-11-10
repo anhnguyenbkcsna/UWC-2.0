@@ -19,14 +19,17 @@ const theme = createTheme({
 function App() {
   return (
     <div>
-            <TaskAssign/>
-            {/* <TaskRoutes /> */}
-      {/* <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <BrowserRouter>
           <Routes>
+            <TaskAssign/>
+            {/* <Route path="/" element={<Navigate to="/home" replace />}></Route>
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/profile" element={<Profile/>} /> */}
           </Routes>
         </BrowserRouter>
-      </ThemeProvider> */}
+      </ThemeProvider>
     </div>
   )
 }
