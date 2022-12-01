@@ -1,13 +1,10 @@
 import React from 'react';
-// import Header, Navbar
-import Assign from '../../components/AssignTask';
 
-const AssignTask = () => {
+const Assign = () => {
   return (
     <div>
-      {/* Header, Navbar here */}
-      <Assign />
+      <h1> AssignTask page </h1>
     </div>
   )
 }
-export default AssignTask
+export default Assign
