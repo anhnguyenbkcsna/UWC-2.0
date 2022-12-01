@@ -22,10 +22,6 @@ function App() {
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <Routes>
-            {/* <Route path="/" element={<Navigate to="/home" replace />}></Route>
-            <Route path="/admin" element={<Admin />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/profile" element={<Profile/>} /> */}
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
