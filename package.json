@@ -21,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "link-module-alias",
+    "preinstall": "link-module-alias clean"
   },
   "eslintConfig": {
     "extends": [
@@ -42,8 +44,8 @@
     ]
   },
   "_moduleAliases": {
-    "assets": "src/assets",
     "components": "src/components",
-    "pages": "src/pages"
+    "pages": "src/pages",
+    "assets": "src/assets"
   }
 }
