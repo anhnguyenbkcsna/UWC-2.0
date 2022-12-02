@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Assign = () => {
+const Navbar = () => {
   return (
     <div>
-      <h1> AssignTask page </h1>
+      <h1> This is Navbar </h1>
     </div>
   )
 }
-export default Assign
+export default Navbar
