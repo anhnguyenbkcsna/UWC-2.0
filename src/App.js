@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { Member } from 'pages/Member';
+import { MemberAndVehicle } from './pages/MemberAndVehicle';
 
 const theme = createTheme({
   // palette: {
@@ -23,7 +23,8 @@ function App() {
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <Routes>
-            <Route path='/member' element={<Member />} />
+            <Route path='/member' element={<MemberAndVehicle type="member"/>} />
+            <Route path='/vehicle' element={<MemberAndVehicle type="vehicle"/>} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
