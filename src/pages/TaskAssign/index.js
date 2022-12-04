@@ -3,6 +3,7 @@ import { makeStyles } from '@mui/styles';
 import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import { Collectors } from '../../components/TaskAssign/Collectors';
 import { Janitors } from '../../components/TaskAssign/Janitors';
+import TaskRoutes from '../../components/TaskAssign/TaskRoutes';
 const useStyles = makeStyles(() => ({
   container: {
     padding: '10px',
@@ -28,8 +29,9 @@ const useStyles = makeStyles(() => ({
     padding: '25px',
   }
 }))
-const Assign = () => {
+const TaskAssign = () => {
   const styles = useStyles();
+  const [page, setPage] = useState('mcp'); // mcp, assign, routes, map,
   const [employee, setEmployee] = useState("")
   const employeeList = ['Collectors', 'Janitors']
   const handleChange = (event) => {
@@ -37,32 +39,37 @@ const Assign = () => {
   };
   return (
     <div className={styles.container}>
-      <div className={styles.header}>
-        <h3 className={styles.title}>Loại hình nhân viên: </h3>
-        <FormControl>
-          <InputLabel id='chooseEmployee'>Employee</InputLabel>
-          <Select
-            id='chooseEmployee'
-            value={employee}
-            label="Employee"
-            onChange={handleChange}          
-            sx={{
-              borderRadius: "25px", 
-              width: "250px", 
-              height: "50px"
-            }}
-          >
-            {employeeList.map((employee) => <MenuItem value={`${employee}`}>{employee}</MenuItem>)}
-          </Select>
-        </FormControl>
-      </div>
+      {/* Assign task */}
+      <>
+        <div className={styles.header}>
+          <h3 className={styles.title}>Loại hình nhân viên: </h3>
+          <FormControl>
+            <InputLabel id='chooseEmployee'>Employee</InputLabel>
+            <Select
+              id='chooseEmployee'
+              value={employee}
+              label="Employee"
+              onChange={handleChange}          
+              sx={{
+                borderRadius: "25px", 
+                width: "250px", 
+                height: "50px"
+              }}
+            >
+              {employeeList.map((employee) => <MenuItem value={`${employee}`}>{employee}</MenuItem>)}
+            </Select>
+          </FormControl>
+        </div>
 
-      {/* Component Assign Page */}
-      <div className={styles.components}>
-        {employee === 'Collectors' && <Collectors/>}
-        {employee === 'Janitors'   && <Janitors/>}
-      </div>
+        {/* Component Assign Page */}
+        <div className={styles.components}>
+          {employee === 'Collectors' && <Collectors/>}
+          {employee === 'Janitors'   && <Janitors/>}
+        </div>
+      </>
+      {/* Routess */}
+      <TaskRoutes />
     </div>
   )
 }
-export default Assign
+export default TaskAssign

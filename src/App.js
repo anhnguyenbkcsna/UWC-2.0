@@ -1,8 +1,7 @@
 import React from 'react';
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import Assign from './pages/TaskAssign';
-
+import TaskAssign from './pages/TaskAssign';
 const theme = createTheme({
   // palette: {
   //   primary: {
@@ -20,7 +19,8 @@ const theme = createTheme({
 function App() {
   return (
     <div>
-            <Assign/>
+            <TaskAssign/>
+            {/* <TaskRoutes /> */}
       {/* <ThemeProvider theme={theme}>
         <BrowserRouter>
           <Routes>
