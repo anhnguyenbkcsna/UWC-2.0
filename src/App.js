@@ -1,6 +1,7 @@
 import React from 'react';
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Layout from './components/Layout/index';
 
 const theme = createTheme({
   // palette: {
@@ -20,11 +21,13 @@ function App() {
   return (
     <div>
       <ThemeProvider theme={theme}>
+        <Layout>
         <BrowserRouter>
           <Routes>
             
           </Routes>
         </BrowserRouter>
+        </Layout>
       </ThemeProvider>
     </div>
   )
