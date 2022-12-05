@@ -13,8 +13,6 @@ export const Calendar = () => {
   let grid = { id: 0, day: 0 };
   const weekspMonth = [0, 1, 2, 3, 4];
   const weekDays = ["cn", "t2", "t3", "t4", "t5", "t6", "t7"];
-
-  console.log("STEP #1 : GET tasks via API / AJAX");
   const [tasks, setTasks] = useState(data);
   const [monthDifference, setMonthDifference] = useState(0);
   const [currentTask, setCurrentTask] = useState({});
@@ -82,8 +80,6 @@ export const Calendar = () => {
 
 
   const deleteTask = () => {
-    console.log("STEP #4 : DELETE task via API / AJAX");
-
     if (window.confirm("You are about to delete an task :(")) {
       setTasks([...tasks.filter((task) => task.id !== currentTask.id)]);
       setShowModal(false);

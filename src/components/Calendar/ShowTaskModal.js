@@ -60,9 +60,7 @@ const CTask = () => {
   );
 }
 
-// START: Show Task Modal
 const ShowTaskModal = ({ visible, task, update, toggle, erase }) => {
-  // let a = new Date(task?.endDate);
   let b = new Date(task?.startDate);
 
   return (
