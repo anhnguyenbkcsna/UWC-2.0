@@ -4,11 +4,13 @@ import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import { Collectors } from '../../components/TaskAssign/Collectors';
 import { Janitors } from '../../components/TaskAssign/Janitors';
 import TaskRoutes from '../../components/TaskAssign/TaskRoutes';
+import { Button } from '@mui/material';
+import './Button.css'
 const useStyles = makeStyles(() => ({
   container: {
     padding: '10px',
     maxWidth: '1300px',
-    height: '650px',
+    height: '60%',
     backgroundColor: '#ffffff',
     // border: "1px solid black",
   },
@@ -22,6 +24,8 @@ const useStyles = makeStyles(() => ({
     paddingRight: '10px',
   },
   components: {
+    position: "relative",
+    marginTop: '20px',
     border: "1px solid black",
     height: '650px',
     borderRadius: '25px',
@@ -31,12 +35,16 @@ const useStyles = makeStyles(() => ({
 }))
 const TaskAssign = () => {
   const styles = useStyles();
-  const [page, setPage] = useState('mcp'); // mcp, assign, routes, map,
+  const [page, setPage] = useState(1); // mcp, assign , routes, map,
   const [employee, setEmployee] = useState("")
   const employeeList = ['Collectors', 'Janitors']
   const handleChange = (event) => {
     setEmployee(event.target.value);
   };
+  const handleChangePage = () => {
+    setPage((prev) => prev+1)
+    // setPage('routes')
+  }
   return (
     <div className={styles.container}>
       {/* Assign task */}
@@ -52,7 +60,7 @@ const TaskAssign = () => {
               onChange={handleChange}          
               sx={{
                 borderRadius: "25px", 
-                width: "250px", 
+                width: "200px", 
                 height: "50px"
               }}
             >
@@ -63,12 +71,17 @@ const TaskAssign = () => {
 
         {/* Component Assign Page */}
         <div className={styles.components}>
-          {employee === 'Collectors' && <Collectors/>}
-          {employee === 'Janitors'   && <Janitors/>}
+          {page === 0 && employee === 'Collectors' && <Collectors/>}
+          {page === 1 && employee === 'Collectors' && <Collectors/>}
+          {page === 1 && employee === 'Janitors'   && <Janitors/>}
+          {page === 2 && <TaskRoutes />}
+
+          <div class="confirmBtn">
+            <button class="confirm" href="" onClick={handleChangePage}>Xác nhận</button>
+          </div>
         </div>
       </>
-      {/* Routess */}
-      <TaskRoutes />
+
     </div>
   )
 }
