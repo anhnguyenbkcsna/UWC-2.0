@@ -1,7 +1,8 @@
 import React from 'react';
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { Router, Navigate, Route, Routes,BrowserRouter } from "react-router-dom";
 import Layout from './components/Layout/index';
+import { MemberAndVehicle } from './pages/MemberAndVehicle';
 
 const theme = createTheme({
   // palette: {
@@ -20,15 +21,12 @@ const theme = createTheme({
 function App() {
   return (
     <div>
-      <ThemeProvider theme={theme}>
         <Layout>
-        <BrowserRouter>
           <Routes>
-            
+          <Route path='/member' element={<MemberAndVehicle type="member"/>} />
+          <Route path='/vehicle' element={<MemberAndVehicle type="vehicle"/>} /> 
           </Routes>
-        </BrowserRouter>
         </Layout>
-      </ThemeProvider>
     </div>
   )
 }

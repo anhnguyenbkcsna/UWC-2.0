@@ -8,7 +8,8 @@
     border-radius: 28px;
     height: auto;
     width: fit-content;
-    margin-left: 5rem;
+    margin-left: 3rem;
+    padding: 0 !important;
 }
 
 #Navbar .icon {
@@ -24,6 +25,15 @@
 }
 
 #Navbar .icon-container {
-    padding: 1.6rem 1.2rem;
+    padding: 1.6rem 1rem;
     width: fit-content;
+}
+
+.icon-container .icon:visited {
+    background-color: black;
+}
+
+.NavLink {
+    display: block;
+    border-radius: 12px;
 }

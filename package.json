@@ -46,6 +46,7 @@
   },
   "_moduleAliases": {
     "components": "src/components",
-    "pages": "src/pages"
+    "pages": "src/pages",
+    "assets": "src/assets"
   }
 }
