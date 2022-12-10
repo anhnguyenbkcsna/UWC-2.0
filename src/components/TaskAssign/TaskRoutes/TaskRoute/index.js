@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@mui/styles';
 import './style.css';
+import { Button } from '@mui/material';
 const useStyles = makeStyles(() => ({
   container: {
     width: '100%',
@@ -11,11 +12,13 @@ const useStyles = makeStyles(() => ({
     textAlign: 'center',
     justifyContent: 'center',
     alignContent: 'center',
+    userSelect: 'none',
   },
   text: {
     color: '#666363',    
     fontSize: '2em',
     fontWeight: 'bold',
+    paddingTop: '10px',
   },
   selectedContainer: {
     width: '100%',
@@ -27,12 +30,18 @@ const useStyles = makeStyles(() => ({
     textAlign: 'center',
     justifyContent: 'center',
     alignContent: 'center',
+    userSelect: 'none',
+  },
+  mapButton: {
+    width: '100%',
+    height: '75px',
   },
   selectedText: {
     color: '#FFFFFF',
     fontSize: '2em',
     fontWeight: 'bold',
-  },
+    paddingTop: '10px',
+  }
 }))
 const TaskRoute = (props) => {
   const styles = useStyles()
@@ -49,7 +58,12 @@ const TaskRoute = (props) => {
               {props.status}
             </p>
           }
-          <p className={styles.text}>Xem vị trí</p>
+          <Button className={styles.mapButton}
+            color="success"
+            sx={{borderRadius: '30px'}}
+          >
+            <p className={styles.text}>Xem vị trí</p>
+          </Button>
         </div>)
       }
       {props.status === "Đang giao" && (<div className={styles.selectedContainer}>
@@ -60,7 +74,12 @@ const TaskRoute = (props) => {
           >
             {props.status}
           </p>
-          <p className={styles.selectedText}>Xem vị trí</p>
+          <Button className={styles.mapButton}
+            color="success"
+            sx={{borderRadius: '30px'}}
+          >
+            <p className={styles.selectedText}>Xem vị trí</p>
+          </Button>
           {/* <Link href="#" underline="hover">
             {'Show map'}
           </Link> */}

@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter');
  * {box-sizing: border-box}
- body{
-   font-family: 'Noto Sans JP', sans-serif;
- }
+ body {
+  font-family: 'Inter';
+}
 button {
   background-color: #378fb4;
   color: white;
@@ -15,6 +15,9 @@ button {
 }
 button:hover {
   opacity:1;
+}
+select, input, textarea {
+  height: 50px;
 }
 .confirm {
   float: left;

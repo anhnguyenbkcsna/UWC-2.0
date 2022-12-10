@@ -23,7 +23,7 @@ export const Janitors = ({childToParent}) => {
   ]
   return (
     // <div className={styles.container}>
-      <form method="post">
+      <form method="post" style={{fontSize: '1.5em'}}>
         <div class="row mb-3">
             <label class="col-sm-3 col-form-label">Khu vực:</label>
             <div class="col-sm-7">
@@ -81,7 +81,7 @@ export const Janitors = ({childToParent}) => {
         </div>
 
         <div class="row mb-3">
-            <label class="col-sm-3 col-form-label">Thời gian bắt đầu:</label>
+            <label class="col-sm-3 col-form-label">Thời gian:</label>
             <div class="col-sm-7">
                 <input type="time" name="Time" class="form-control" />
             </div>
