@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@devexpress/dx-react-core": "^4.0.0",
+    "@devexpress/dx-react-scheduler": "^4.0.0",
+    "@devexpress/dx-react-scheduler-material-ui": "^4.0.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.10.16",
@@ -14,6 +17,8 @@
     "link-module-alias": "^1.2.0",
     "react": "^18.2.0",
     "react-animated-progress-bar": "^1.1.2",
+    "react-ajax": "^0.1.1",
+    "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.4.3",

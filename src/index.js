@@ -6,6 +6,8 @@ import App from './App';
 import {BrowserRouter as Router} from 'react-router-dom';
 // import { AuthContextProvider } from "./store/auth-context";
 
+// import { Footer } from './pages/Footer'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <AuthContextProvider>
