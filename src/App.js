@@ -22,11 +22,8 @@ function App() {
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <Routes>
-            <TaskAssign/>
-            {/* <Route path="/" element={<Navigate to="/home" replace />}></Route>
-            <Route path="/admin" element={<Admin />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/profile" element={<Profile/>} /> */}
+            <Route path="/" element={<Navigate to="/taskassign" replace />}></Route>
+            <Route path="/taskassign" element={<TaskAssign />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

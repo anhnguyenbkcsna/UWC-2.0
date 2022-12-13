@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -10,8 +9,6 @@ const style = {
   flexDirection: 'column',
   alignItems: 'center',
   position: 'absolute',
-  width: '100%',
-  height: '100%',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',

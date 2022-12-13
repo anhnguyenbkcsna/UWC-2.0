@@ -103,7 +103,6 @@ const MCPS = () => {
         justifyContent="center"
         flexDirection="row"
         columnSpacing={10}
-        q
       >
         <Grid item>
           <CardContent style={{ userSelect: "none" }}>
