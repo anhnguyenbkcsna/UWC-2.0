@@ -10,11 +10,13 @@ import ConfirmModal from "../../components/TaskAssign/ConfirmModal";
 import "./Button.css";
 const useStyles = makeStyles(() => ({
   container: {
-    padding: "10px",
+    position: "fixed",
+    top: "20%",
+    left: "13%",
+    width: "84%",
+    height: "75%",
     maxWidth: "1300px",
-    height: "60%",
     backgroundColor: "#ffffff",
-    // border: "1px solid black",
   },
   header: {
     display: "flex",
@@ -29,11 +31,9 @@ const useStyles = makeStyles(() => ({
   components: {
     position: "relative",
     marginTop: "20px",
-    border: "1px solid black",
-    height: "650px",
+    height: "600px",
     borderRadius: "25px",
     boxShadow: "5px 5px 25px 10px rgba(0, 0, 0, 0.1)",
-    padding: "25px",
   },
 }));
 const TaskAssign = () => {
