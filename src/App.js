@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { MemberAndVehicle } from './pages/MemberAndVehicle';
-
+import TaskAssign from './pages/TaskAssign';
 const theme = createTheme({
   // palette: {
   //   primary: {
@@ -25,6 +25,7 @@ function App() {
           <Routes>
             <Route path='/member' element={<MemberAndVehicle type="member"/>} />
             <Route path='/vehicle' element={<MemberAndVehicle type="vehicle"/>} />
+            <Route path="/taskassign" element={<TaskAssign />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
