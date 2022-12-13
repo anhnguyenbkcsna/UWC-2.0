@@ -1,10 +1,16 @@
 @import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css');
-
+#CALENDAR .container {
+    position: fixed;
+    top: 20%;
+    left: 13%;
+    width: 84%;
+    height: 75%;
+}
 #CALENDAR .cal {
     margin-bottom: 4rem;
     padding: 0;
     border-radius: 2rem;
-    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.07);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.1);
 }
 
 #CALENDAR .turn {
@@ -48,7 +54,7 @@
 }
 
 #CALENDAR .box {
-    height: 6rem;
+    height: 5rem;
     min-width: 6rem;
     font-size: 0.9rem;
     font-weight: 700;
@@ -72,7 +78,10 @@
     font-size: 0.7rem;
     font-weight: 700;
 }
-
+#CALENDAR .btn-change-month-container{
+    display: flex;
+    flex-direction: row;
+}
 #CALENDAR .green {
     background-color: #a4d254;
     font-weight: 500;

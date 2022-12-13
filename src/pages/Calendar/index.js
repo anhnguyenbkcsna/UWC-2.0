@@ -8,7 +8,7 @@ import ShowTaskModal from '../../components/Calendar/ShowTaskModal';
 import EditTaskModal from '../../components/Calendar/EditTaskModal';
 
 // START: Calendar
-export const Calendar = () => {
+const Calendar = () => {
   let today = new Date();
   let grid = { id: 0, day: 0 };
   const weekspMonth = [0, 1, 2, 3, 4];
@@ -116,7 +116,7 @@ export const Calendar = () => {
               month.today.toLocaleString("default", { year: "numeric" })
             }
           </div>
-          <div>
+          <div className="btn-change-month-container">
             <button
               className="btn ms-1 turn"
               onClick={() => setMonthDifference(monthDifference - 1)}
@@ -183,4 +183,5 @@ export const Calendar = () => {
     </div>
   );
 };
+export default Calendar;
 // END: Calendar
