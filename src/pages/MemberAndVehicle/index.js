@@ -19,7 +19,8 @@ export const MemberAndVehicle = ({ type }) => {
 				display: "grid",
 				gridTemplateColumns: "1fr 2fr",
 				columnGap: "2%"
-			}}>
+			}}
+			>
 			<ListItem type={type} data={data} chosen={chosen} setChosen={setChosen} />
 			{type === "member"
 				? <MemberDetail data={data[chosen]} />

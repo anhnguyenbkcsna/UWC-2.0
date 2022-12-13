@@ -1,34 +1,21 @@
 import React from 'react';
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+// import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { BrowserRouter, Navigate, Router, Route, Routes } from "react-router-dom";
+
+import Layout from './components/Layout/index';
 import { MemberAndVehicle } from './pages/MemberAndVehicle';
 import TaskAssign from './pages/TaskAssign';
-const theme = createTheme({
-  // palette: {
-  //   primary: {
-  //     main: '#03045E'
-  //   },
-  //   secondary: {
-  //     main: '#00B4D8'
-  //   },
-  //   tertiary: {
-  //     main: '#90E0EF'
-  //   },
-  // }
-});
 
 function App() {
   return (
     <div>
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
+        <Layout>
           <Routes>
             <Route path='/member' element={<MemberAndVehicle type="member"/>} />
             <Route path='/vehicle' element={<MemberAndVehicle type="vehicle"/>} />
-            <Route path="/taskassign" element={<TaskAssign />} />
+            <Route path="/assign-task" element={<TaskAssign />} />
           </Routes>
-        </BrowserRouter>
-      </ThemeProvider>
+        </Layout>
     </div>
   )
 }
