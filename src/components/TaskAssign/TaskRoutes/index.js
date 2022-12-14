@@ -17,7 +17,7 @@ const useStyles = makeStyles(() => ({
     backgroundClip: 'text',
   }
 }))
-const TaskRoutes = () => {
+const TaskRoutes = ({handleChangePage}) => {
   const styles = useStyles()
   let routeList = [
     {taskID: 'R11A', routeName: 'Tuyến đường A', status: 'Đã giao'},
@@ -31,7 +31,7 @@ const TaskRoutes = () => {
     <div className={styles.container}>
       <h3 className={styles.title}>TUYẾN ĐƯỜNG</h3>
       {routeList.map((route, idx) => (
-        <TaskRoute className={styles.taskroute} key={idx} taskID={route.taskID} routeName={route.routeName} status={route.status} />
+        <TaskRoute className={styles.taskroute} key={idx} taskID={route.taskID} routeName={route.routeName} status={route.status} handleChangePage={handleChangePage}/>
       ))}
       {/* <TaskRoute taskID="R11A" routeName={routeList[1].routeName} status={routeList[1].status} /> */}
 

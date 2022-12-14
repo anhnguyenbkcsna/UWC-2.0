@@ -47,7 +47,6 @@ const TaskRoute = (props) => {
   const styles = useStyles()
   return (
     <>
-      {console.log(props)}
       {props.status !== "Đang giao" && (<div className={styles.container}>
           <p className={styles.text}>{props.taskID}</p>
           <p className={styles.text}>{props.routeName}</p>
@@ -77,6 +76,7 @@ const TaskRoute = (props) => {
           <Button className={styles.mapButton}
             color="success"
             sx={{borderRadius: '30px'}}
+            onClick={props.handleChangePage}
           >
             <p className={styles.selectedText}>Xem vị trí</p>
           </Button>

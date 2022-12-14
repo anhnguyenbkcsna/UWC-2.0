@@ -5,9 +5,10 @@ import { Collectors } from "../../components/TaskAssign/Collectors";
 import { Janitors } from "../../components/TaskAssign/Janitors";
 import TaskRoutes from "../../components/TaskAssign/TaskRoutes";
 import MCPS from "../../components/TaskAssign/MCPS";
-import Maps from "../../components/TaskAssign/Maps";
 import ConfirmModal from "../../components/TaskAssign/ConfirmModal";
 import "./Button.css";
+import MapBox from "./Map";
+import { useNavigate } from "react-router-dom";
 const useStyles = makeStyles(() => ({
   container: {
     position: "fixed",
@@ -34,10 +35,12 @@ const useStyles = makeStyles(() => ({
     height: "600px",
     borderRadius: "25px",
     boxShadow: "5px 5px 25px 10px rgba(0, 0, 0, 0.1)",
+    margin: '20px',
   },
 }));
 const TaskAssign = () => {
   const styles = useStyles();
+  const navigate = useNavigate();
   const [page, setPage] = useState(0); // mcp, assign , routes, map,
   const [employee, setEmployee] = useState("");
   const employeeList = ["Collectors", "Janitors"];
@@ -82,9 +85,10 @@ const TaskAssign = () => {
               {employee === "Janitors" && <Janitors />}
             </>
           )}
-          {page === 2 && <TaskRoutes />}
-          {page === 3 && <Maps />}
+          {page === 2 && <TaskRoutes handleChangePage={handleChangePage}/>}
+          {page === 3 && <MapBox />}
           {page === 4 && <ConfirmModal />}
+          {page === 5 && navigate('/')}
 
           <div class="confirmBtn" style={{userSelect: 'none'}}>
             <button class="confirm" href="" onClick={handleChangePage}>
