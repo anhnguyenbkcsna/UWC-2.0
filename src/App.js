@@ -7,6 +7,7 @@ import { MCPS } from './pages/MCP';
 import { MemberAndVehicle } from './pages/MemberAndVehicle';
 import TaskAssign from './pages/TaskAssign';
 import Calendar from './pages/Calendar';
+import { Mcp } from './pages/MCP';
 import MapBox from './pages/TaskAssign/Map';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/assign-task" element={<TaskAssign />} />
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/map" element={<MapBox />} />
+            <Route path="/mcp" element={<Mcp/>}/>
           </Routes>
         </Layout>
     </div>
