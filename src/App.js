@@ -7,6 +7,7 @@ import { MemberAndVehicle } from './pages/MemberAndVehicle';
 import TaskAssign from './pages/TaskAssign';
 import Calendar from './pages/Calendar';
 import { Mcp } from './pages/MCP';
+import MapBox from './pages/TaskAssign/Map';
 
 function App() {
   return (
