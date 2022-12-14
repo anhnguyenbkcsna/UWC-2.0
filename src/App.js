@@ -17,6 +17,7 @@ function App() {
             <Route path='/vehicle' element={<MemberAndVehicle type="vehicle"/>} />
             <Route path="/assign-task" element={<TaskAssign />} />
             <Route path="/calendar" element={<Calendar />} />
+            <Route path="/map" element={<MapBox />} />
             <Route path="/mcp" element={<Mcp/>}/>
           </Routes>
         </Layout>

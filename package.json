@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@aws-amplify/ui-react": "^0.0.0-next-0377bcc-20221203011350",
     "@devexpress/dx-react-core": "^4.0.0",
     "@devexpress/dx-react-scheduler": "^4.0.0",
     "@devexpress/dx-react-scheduler-material-ui": "^4.0.0",
