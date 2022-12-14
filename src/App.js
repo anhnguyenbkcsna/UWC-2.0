@@ -1,34 +1,27 @@
 import React from 'react';
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { MemberAndVehicle } from './pages/MemberAndVehicle';
+import { Route, Routes } from "react-router-dom";
+import Layout from './components/Layout/index';
+
+// components
 import { MCPS } from './pages/MCP';
-const theme = createTheme({
-  // palette: {
-  //   primary: {
-  //     main: '#03045E'
-  //   },
-  //   secondary: {
-  //     main: '#00B4D8'
-  //   },
-  //   tertiary: {
-  //     main: '#90E0EF'
-  //   },
-  // }
-});
+import { MemberAndVehicle } from './pages/MemberAndVehicle';
+import TaskAssign from './pages/TaskAssign';
+import Calendar from './pages/Calendar';
+import MapBox from './pages/TaskAssign/Map';
 
 function App() {
   return (
     <div>
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
+        <Layout>
           <Routes>
             <Route path='/member' element={<MemberAndVehicle type="member"/>} />
             <Route path='/vehicle' element={<MemberAndVehicle type="vehicle"/>} />
             <Route path='/mcps' element={<MCPS/>} />
+            <Route path="/assign-task" element={<TaskAssign />} />
+            <Route path="/calendar" element={<Calendar />} />
+            <Route path="/map" element={<MapBox />} />
           </Routes>
-        </BrowserRouter>
-      </ThemeProvider>
+        </Layout>
     </div>
   )
 }

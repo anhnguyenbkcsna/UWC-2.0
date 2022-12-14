@@ -19,7 +19,7 @@ export const MemberDetail = ({ data }) => {
 				backgroundImage: "linear-gradient(#426DEC, #86C991)",
 				color: "transparent",
 				WebkitBackgroundClip: "text"
-			}}>Thông tin của nhân viên {data.name}</h3>
+			}}>Thông tin của {data.name}</h3>
 			<div style={{ height: "20%", display: "grid", fontSize: "0.9rem" }}>
 				{[firstRow, secondRow, thirdRow].map((row) =>
 					<div style={{ display: "flex", justifyContent: "space-between" }}>
