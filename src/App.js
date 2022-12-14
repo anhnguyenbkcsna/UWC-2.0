@@ -3,11 +3,10 @@ import { Route, Routes } from "react-router-dom";
 import Layout from './components/Layout/index';
 
 // components
-import { MCPS } from './pages/MCP';
 import { MemberAndVehicle } from './pages/MemberAndVehicle';
 import TaskAssign from './pages/TaskAssign';
 import Calendar from './pages/Calendar';
-import { Mcp } from './pages/MCP';
+import MCPS from './pages/MCPS';
 import MapBox from './pages/TaskAssign/Map';
 
 function App() {
@@ -17,11 +16,10 @@ function App() {
           <Routes>
             <Route path='/member' element={<MemberAndVehicle type="member"/>} />
             <Route path='/vehicle' element={<MemberAndVehicle type="vehicle"/>} />
-            <Route path='/mcps' element={<MCPS/>} />
             <Route path="/assign-task" element={<TaskAssign />} />
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/map" element={<MapBox />} />
-            <Route path="/mcp" element={<Mcp/>}/>
+            <Route path="/mcp" element={<MCPS/>}/>
           </Routes>
         </Layout>
     </div>
