@@ -6,7 +6,7 @@ import Layout from './components/Layout/index';
 import { MemberAndVehicle } from './pages/MemberAndVehicle';
 import TaskAssign from './pages/TaskAssign';
 import Calendar from './pages/Calendar';
-import MapBox from './pages/TaskAssign/Map';
+import { Mcp } from './pages/MCP';
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
             <Route path="/assign-task" element={<TaskAssign />} />
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/map" element={<MapBox />} />
+            <Route path="/mcp" element={<Mcp/>}/>
           </Routes>
         </Layout>
     </div>
