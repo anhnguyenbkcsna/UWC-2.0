@@ -1,9 +1,9 @@
 import { Button } from "@mui/material";
 import React from "react";
-import EmojiSunglasses from "assets/images/EmojiSunglasses.png";
-import EmojiSunglassesChosen from "assets/images/EmojiSunglasses-chosen.png";
-import DeliveryTruck from "assets/images/DeliveryTruck.png";
-import DeliveryTruckChosen from "assets/images/DeliveryTruck-chosen.png";
+import EmojiSunglasses from "./../../../assets/images/EmojiSunglasses.png";
+import EmojiSunglassesChosen from "./../../../assets/images/EmojiSunglasses-chosen.png";
+import DeliveryTruck from "./../../../assets/images/DeliveryTruck.png";
+import DeliveryTruckChosen from "./../../../assets/images/DeliveryTruck-chosen.png";
 
 export const ListItem = ({ type, data, chosen, setChosen }) => {
 	return (

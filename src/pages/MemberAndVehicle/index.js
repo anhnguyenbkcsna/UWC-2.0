@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { ListItem } from "components/MemberAndVehicle/ListItem";
-import { MemberDetail } from "components/MemberAndVehicle/MemberDetail";
-import { VehicleDetail } from "components/MemberAndVehicle/VehicleDetail";
+import { ListItem } from "./../../components/MemberAndVehicle/ListItem";
+import { MemberDetail } from "./../../components/MemberAndVehicle/MemberDetail";
+import { VehicleDetail } from "./../../components/MemberAndVehicle/VehicleDetail";
 import { memberData, vehicleData } from "./const";
 
 export const MemberAndVehicle = ({ type }) => {
