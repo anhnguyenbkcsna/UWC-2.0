@@ -23,7 +23,7 @@ export const Janitors = ({childToParent}) => {
   ]
   return (
     // <div className={styles.container}>
-      <form method="post" style={{fontSize: '1.5em'}}>
+      <form method="post" style={{fontSize: '1.5em', padding: "0 2rem"}}>
         <div class="row mb-3">
             <label class="col-sm-3 col-form-label">Khu vực:</label>
             <div class="col-sm-7">

@@ -57,7 +57,7 @@ const TaskAssign = () => {
           {page === 0 && <MCPS />}
           {page === 1 && (
             <>
-              <div className={styles.header}>
+              <div className={styles.header} style={{padding: "2rem"}}>
                 <h3 className={styles.title}>Loại hình nhân viên: </h3>
                 <FormControl>
                   <InputLabel id="chooseEmployee">Employee</InputLabel>

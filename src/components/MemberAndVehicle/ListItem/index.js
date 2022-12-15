@@ -12,10 +12,12 @@ export const ListItem = ({ type, data, chosen, setChosen }) => {
 				backgroundColor: "white",
 				boxShadow: "0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%)",
 				borderRadius: "1rem",
-				padding: "0 1.5rem 1.5rem 1.5rem"
+				padding: "1.5rem 1.5rem 1.5rem 1.5rem"
 			}}>
+			
 			<h3 style={{
-				backgroundImage: "linear-gradient(#426DEC, #86C991)",
+				fontWeight: "700",
+				backgroundImage: "linear-gradient(180deg, rgba(66,109,236,1) 0%, rgba(134,201,145,1) 100%)",
 				color: "transparent",
 				WebkitBackgroundClip: "text"
 			}}>{type === "member" ? "Nhân viên" : "Phương tiện"}</h3>

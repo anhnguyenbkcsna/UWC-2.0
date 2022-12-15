@@ -15,7 +15,7 @@ export const Collectors = ({childToParent}) => {
   // }
   return (
       // <form onSubmit={handleSubmit()}>
-      <form method='post' id="collector_form" style={{fontSize: '1.5em'}}>
+      <form method='post' id="collector_form" style={{fontSize: '1.5em', padding: "0 2rem"}}>
         <div class="row mb-3">
           <label class="col-sm-3 col-form-label">ID-Router:</label>
           <div class="col-sm-7">

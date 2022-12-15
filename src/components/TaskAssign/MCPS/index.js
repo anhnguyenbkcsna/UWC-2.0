@@ -51,7 +51,7 @@ const MCPSList2 = [
     percentage: "50",
     color_bar: "#FFE76B",
   },
-  { key: 10, name: "Dĩ An 4", percentage: "20", color_bar: "#97E075" },
+  
 ];
 
 const active = { backgroundColor: "#d7d7d7", borderRadius: "26px" };
@@ -73,7 +73,7 @@ const MCPS = () => {
   };
   return (
     <>
-      <div className={styles.header}>
+      <div className={styles.header} style={{padding: "2rem"}}>
         <h3 className={styles.title}>MCPs</h3>
         <div className={styles.filter}>
           <FormControl>

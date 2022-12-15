@@ -13,7 +13,7 @@ export const MemberDetail = ({ data }) => {
 				backgroundColor: "white",
 				boxShadow: "0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%)",
 				borderRadius: "1rem",
-				padding: "0.5rem 1.5rem 1.5rem 1.5rem"
+				padding: "1.5rem 1.5rem 1.5rem 1.5rem"
 			}}>
 			<h3>Thông tin của nhân viên {data.name}</h3>
 			<div style={{ height: "25%", display: "grid", fontSize: "0.9rem" }}>

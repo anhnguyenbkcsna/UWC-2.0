@@ -5,7 +5,6 @@ import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 import Card from '@mui/material/Card';
-import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import ProgressBar from 'react-animated-progress-bar';
@@ -13,7 +12,7 @@ import { useState } from "react";
 import { DataGrid } from '@mui/x-data-grid';
 
 const CustomColor = styled('div')({
-      background: "-webkit-linear-gradient(180deg, #426DEC 0%, #86C991 100%)",
+    background: 'linear-gradient(180deg, rgba(66,109,236,1) 0%, rgba(134,201,145,1) 100%)',
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent"
     
@@ -187,8 +186,8 @@ export const MCP = () => {
                     flexDirection={{ xs: "column", sm: "row" }}
                     columnSpacing={3}
                 >
-                    <Grid item sm={6} xs={15} md={6} lg={4.7} >
-                        <Card style={{height: '560px', borderRadius: "2rem", boxShadow: "5px 5px 15px 0px rgba(0, 0, 0, 0.1)"}}>
+                    <Grid item sm={6} xs={13} md={6} lg={4.7} >
+                        <Card style={{height: '560px', borderRadius: "1rem", boxShadow: "5px 5px 15px 0px rgba(0, 0, 0, 0.1)"}}>
                                 <CardContent >
                                     <CustomColor>
                                         <Typography gutterBottom variant="h5" >
@@ -205,7 +204,7 @@ export const MCP = () => {
                                                 <Typography variant="body1" component="div" style={{ marginBottom: "-15px", marginLeft: '1px'}}>
                                                     <strong>{info.name}</strong></Typography>
                                                     <ProgressBar
-                                                        width="320px"
+                                                        width="auto"
                                                         height="9px"
                                                         rect
                                                         fontColor={info.color_bar}
@@ -229,7 +228,7 @@ export const MCP = () => {
                         </Card>
                     </Grid>
                     <Grid item xs={15} sm={10} md={10} lg={11.2}>
-                        <Card style={{height: '560px', borderRadius: "2rem", boxShadow: "5px 5px 15px 0px rgba(0, 0, 0, 0.1)"}}>
+                        <Card style={{height: '560px', borderRadius: "1rem", boxShadow: "5px 5px 15px 0px rgba(0, 0, 0, 0.1)"}}>
                                 <CardContent>
                                 <Grid container columns={9.5} spacing={5}>
                                     <Grid item container columns={9.5} spacing={2}>
