@@ -11,7 +11,7 @@ import Typography from '@mui/material/Typography';
 import ProgressBar from 'react-animated-progress-bar';
 import { useState } from "react";
 import { DataGrid } from '@mui/x-data-grid';
-import {MCP} from '../../components/MCP';
+import {MCP} from 'components/MCP';
 
 const useStyles = makeStyles(() => ({
     container: {
@@ -31,12 +31,12 @@ const useStyles = makeStyles(() => ({
     }
 }))
 
-export const Mcp = () =>  {
+const MCPs = () =>  {
     const styles = useStyles();
     return(
         <div className={styles.container}>
-        <MCP></MCP>
+        <MCP />
         </div>
     )
 } 
-
+export default MCPs
